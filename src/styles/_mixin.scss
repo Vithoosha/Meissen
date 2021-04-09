@@ -1,0 +1,51 @@
+@import "./_variables.scss";
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin pseudo() {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+@mixin font($fontSize, $lineHeight, $weight, $color) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin maxWidth() {
+  max-width: $gl-width;
+  margin: auto;
+  padding: $gl-padding 0;
+}
+
+@mixin btn() {
+  font-style: italic;
+  width: fit-content;
+  padding: $m-padding $gl-padding;
+  position: relative;
+  z-index: 1;
+}
+
+@mixin btn-before() {
+  @include pseudo;
+  transition: 0.5s all ease;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+}
+@mixin btn-hover_before() {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}

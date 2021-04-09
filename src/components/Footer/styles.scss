@@ -1,0 +1,39 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_colors.scss";
+@import "../../styles/_mixin.scss";
+
+.Footer {
+  @include maxWidth;
+  @include flex(space-between, flex-start);
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  color: $light;
+  & a {
+    @include font(0.8rem, 1rem, normal, $light);
+    position: relative;
+    &:after {
+      @include pseudo;
+      background: $secondary;
+      width: 0;
+      bottom: 0;
+      height: 2px;
+      left: 50%;
+      transition: all 0.3s ease 0s;
+    }
+    &:hover:after {
+      width: 100%;
+      left: 0;
+    }
+    &:visited {
+      color: $light;
+    }
+  }
+  & h5 {
+    text-transform: uppercase;
+  }
+
+  > .legal,
+  .service {
+    text-align: right;
+  }
+}

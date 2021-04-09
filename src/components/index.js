@@ -1,0 +1,6 @@
+export { default as Hero } from "./Hero";
+export { default as Navbar } from "./Navbar";
+export { default as NewProducts } from "./NewProducts";
+export { default as Newsletter } from "./Newsletter";
+export { default as Collections } from "./Collections";
+export { default as Footer } from "./Footer";

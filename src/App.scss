@@ -1,0 +1,16 @@
+@import "./styles/_variables.scss";
+@import "./styles/_colors.scss";
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $dark;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  padding: 0 $m-padding;
+  margin-top: 60px;
+}
+.container {
+  background-color: $dark;
+  padding: 0 $m-padding;
+}

@@ -1,0 +1,57 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_colors.scss";
+@import "../../styles/_mixin.scss";
+@import "../../styles/_breakpoints.scss";
+
+.wrapper_nav {
+  padding: 0 $m-padding;
+  nav {
+    @include maxWidth;
+    @include flex(space-between, center);
+  }
+  button {
+    background-color: $light;
+    border: 0;
+    &:focus {
+      outline: 1px solid $dark;
+    }
+  }
+}
+.nav_logo {
+  max-height: 20px;
+}
+.menu {
+  display: none;
+}
+
+@include desktop {
+  .wrapper_nav button {
+    display: none;
+  }
+  .menu {
+    @include flex(space-between, center);
+    > li {
+      margin-left: $gl-padding;
+      > a {
+        color: $dark;
+        position: relative;
+        &:after {
+          @include pseudo;
+          background: $secondary;
+          width: 0;
+          bottom: 0;
+          height: 2px;
+          left: 50%;
+          transition: all 0.3s ease 0s;
+        }
+        &:hover:after {
+          width: 100%;
+          left: 0;
+        }
+        &:visited {
+          color: $dark;
+        }
+      }
+    }
+  }
+}
