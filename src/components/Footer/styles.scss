@@ -5,8 +5,6 @@
 .Footer {
   @include maxWidth;
   @include flex(space-between, flex-start);
-  //   display: grid;
-  //   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   color: $light;
   & a {
     @include font(0.8rem, 1rem, normal, $light);

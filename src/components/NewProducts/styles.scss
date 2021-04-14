@@ -15,7 +15,6 @@
 
 .newProduct {
   display: block;
-  // background-color: $gr-secondary;
   margin: 0 10px;
   padding-bottom: $m-padding;
   align-items: center;
@@ -34,7 +33,6 @@
     max-width: 210px;
     overflow: hidden;
     text-overflow: ellipsis;
-    // font-weight: normal;
     margin-bottom: $m-padding;
     font-size: 1rem;
   }

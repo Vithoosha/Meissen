@@ -1,19 +1,20 @@
 import "./styles.scss";
 import logo from "../../assets/image/logo.png";
 import { ReactComponent as Hamburger } from "../../assets/image/hamburger.svg";
+import { ReactComponent as Close } from "../../assets/image/close.svg";
 import CartIcon from "../CartIcon";
 import { menu_links } from "../../assets/utils";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ manageMenu, isOpen }) {
   return (
     <div className="wrapper_nav">
       <nav>
         <Link to="/">
           <img className="nav_logo" src={logo} alt="Meissen" />
         </Link>
-        <button type="button">
-          <Hamburger className="Hamburger" />
+        <button type="button" onClick={manageMenu}>
+          {!isOpen ? <Hamburger className="Hamburger" /> : <Close />}
         </button>
         <ul className="menu">
           {menu_links.map((link) => {

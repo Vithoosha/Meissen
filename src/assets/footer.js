@@ -2,27 +2,27 @@ export const corporate = [
   {
     text: "About us",
     url: "https://www.meissen.com/en/",
-    id: "co01",
+    id: 1000,
   },
   {
     text: "Contact",
     url: "https://www.meissen.com/en/",
-    id: "co02",
+    id: 1001,
   },
   {
     text: "Career",
     url: "https://www.meissen.com/en/",
-    id: "co03",
+    id: 1002,
   },
   {
     text: "Press",
     url: "https://www.meissen.com/en/",
-    id: "co04",
+    id: 1003,
   },
   {
     text: "MEISSEN Stores",
     url: "https://www.meissen.com/en/",
-    id: "co05",
+    id: 1004,
   },
 ];
 
@@ -30,27 +30,27 @@ export const faq = [
   {
     text: "My account",
     url: "https://www.meissen.com/en/",
-    id: "f01",
+    id: 1005,
   },
   {
     text: "Newsletter",
     url: "https://www.meissen.com/en/",
-    id: "f02",
+    id: 1006,
   },
   {
     text: "Orders",
     url: "https://www.meissen.com/en/",
-    id: "f03",
+    id: 1007,
   },
   {
     text: "Delivery",
     url: "https://www.meissen.com/en/",
-    id: "f04",
+    id: 1008,
   },
   {
     text: "Payment",
     url: "https://www.meissen.com/en/",
-    id: "f05",
+    id: 1009,
   },
 ];
 
@@ -58,17 +58,17 @@ export const legal = [
   {
     text: "Imprint",
     url: "https://www.meissen.com/en/",
-    id: "l01",
+    id: 1010,
   },
   {
     text: "Privacy Policy",
     url: "https://www.meissen.com/en/",
-    id: "l02",
+    id: 1011,
   },
   {
     text: "Terms & Conditions",
     url: "https://www.meissen.com/en/",
-    id: "l03",
+    id: 1012,
   },
 ];
 
@@ -76,26 +76,26 @@ export const service = [
   {
     text: "Catalogues",
     url: "https://www.meissen.com/en/",
-    id: "s01",
+    id: 1013,
   },
   {
     text: "Restoration",
     url: "https://www.meissen.com/en/",
-    id: "s02",
+    id: 1014,
   },
   {
     text: "Hiring Porcelain",
     url: "https://www.meissen.com/en/",
-    id: "s03",
+    id: 1015,
   },
   {
     text: "Customisation",
     url: "https://www.meissen.com/en/",
-    id: "s04",
+    id: 1016,
   },
   {
     text: "Porcelain care",
     url: "https://www.meissen.com/en/",
-    id: "s05",
+    id: 1017,
   },
 ];

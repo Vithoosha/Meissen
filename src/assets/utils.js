@@ -7,19 +7,21 @@ export function formatPrice(price) {
   return formatter.format(price);
 }
 
+export const API_Products = "https://practice-mocks-api.herokuapp.com/";
+
 export const menu_links = [
   {
-    id: 100,
+    id: 200,
     text: "Home",
-    ur: "/",
+    url: "/",
   },
   {
-    id: 101,
+    id: 201,
     text: "Products",
     url: "/products",
   },
   {
-    id: 102,
+    id: 202,
     text: "Craftsmanship",
     url: "/",
   },

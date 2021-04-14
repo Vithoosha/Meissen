@@ -9,7 +9,7 @@ export const data = [
     info:
       "Our exquisite Vide-Poches are small and big all-rounders. Whether as a jewellery bowl or as a decoration element, they beautify your everyday life in numerous ways.",
     url: "https://www.meissen.com/en/",
-    id: "C01",
+    id: "100",
   },
   {
     image: co2,
@@ -17,7 +17,7 @@ export const data = [
     info:
       "The existing collaboration is now being expanded with an exclusive collection that implements the artist's unique design language on Home Deco porcelain.",
     url: "https://www.meissen.com/en/",
-    id: "C02",
+    id: 101,
   },
   {
     image: co3,
@@ -25,6 +25,6 @@ export const data = [
     info:
       "Enchant your loved one with our jewellery made of white gold and express your love and affection with the romantic Royal Blossom Collection.",
     url: "https://www.meissen.com/en/",
-    id: "C03",
+    id: 102,
   },
 ];

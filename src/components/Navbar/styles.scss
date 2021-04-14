@@ -5,6 +5,7 @@
 
 .wrapper_nav {
   padding: 0 $m-padding;
+  z-index: 3;
   nav {
     @include maxWidth;
     @include flex(space-between, center);
