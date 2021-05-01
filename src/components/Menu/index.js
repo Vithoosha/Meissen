@@ -6,16 +6,16 @@ import CartIcon from "../CartIcon";
 function Menu({ isOpen }) {
   return (
     <aside className={`${isOpen ? "Menu isOpen" : "Menu"}`}>
-      <ul>
+      <ul className="Menu_list">
         {menu_links.map((link) => {
           const { id, text, url } = link;
           return (
-            <li key={id}>
+            <li key={id} className="Menu__link">
               <Link to={url}>{text}</Link>
             </li>
           );
         })}
-        <li>
+        <li className="Menu__links">
           <CartIcon />
         </li>
       </ul>

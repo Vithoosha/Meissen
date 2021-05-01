@@ -4,15 +4,21 @@ function Newsletter() {
   return (
     <section className="wrapper bgcolor">
       <div className="Newsletter">
-        <div className="newsletter_body">
-          <h3>newsletter registration</h3>
-          <p>
+        <div className="Newsletter__body">
+          <h3 className="Newsletter__title">newsletter registration</h3>
+          <p className="Newsletter__text">
             We regularly surprise you with individual offers, product news and
             exciting stories from Europe's oldest porcelain factory.
           </p>
-          <form>
-            <input type="email" placeholder="enter your email" />
-            <button type="submit">Subscribe</button>
+          <form className="Newsletter__form">
+            <input
+              type="email"
+              placeholder="enter your email"
+              className="Newsletter__input"
+            />
+            <button type="submit" className="Newsletter__btn">
+              Subscribe
+            </button>
           </form>
         </div>
       </div>

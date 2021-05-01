@@ -1,11 +1,14 @@
 import "./styles.scss";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Loader, ErrorMessage } from "../../components";
 import { ReactComponent as Close } from "../../assets/image/close.svg";
 import { ProductsContext } from "../../store/context/ProductsProvider";
 
 function Product() {
+  const [amount, setAmount] = useState(1);
+  const increase = () => {};
+  const decrease = () => {};
   const { id } = useParams();
 
   const {
@@ -51,6 +54,10 @@ function Product() {
           <p className="Product_price">€{price}</p>
         </div>
         <div className="Product_cart">
+          <div>
+            <button>-</button>
+            <button>+</button>
+          </div>
           <button>Add to cart</button>
         </div>
       </div>

@@ -8,20 +8,19 @@ import { Link } from "react-router-dom";
 
 function Navbar({ manageMenu, isOpen }) {
   return (
-    <div className="wrapper_nav">
-      <nav>
+    <div className="Navbar_wrapper">
+      <nav className="Navbar">
         <Link to="/">
-          <img className="nav_logo" src={logo} alt="Meissen" />
+          <img className="Navbar__logo" src={logo} alt="Meissen" />
         </Link>
-        <button type="button" onClick={manageMenu}>
-          {!isOpen ? <Hamburger className="Hamburger" /> : <Close />}
+        <button className="Navbar__btn" type="button" onClick={manageMenu}>
+          {!isOpen ? <Hamburger /> : <Close />}
         </button>
-        <ul className="menu">
+        <ul className="Navbar__menu">
           {menu_links.map((link) => {
-            const { id, text, url } = link;
             return (
-              <li key={id}>
-                <Link to={url}>{text}</Link>
+              <li key={link.id} className="Navbar__link">
+                <Link to={link.url}>{link.text}</Link>
               </li>
             );
           })}

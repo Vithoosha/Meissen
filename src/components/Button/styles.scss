@@ -1,0 +1,55 @@
+@import "../../styles/variables", "../../styles/colors", "../../styles/mixin";
+
+.Button {
+  @include btn;
+  font-size: 1rem;
+  font-style: italic;
+
+  &.secondary {
+    border: 1px solid $secondary;
+    background-color: $secondary;
+    color: $dark;
+
+    &:focus {
+      outline: 1px solid $primary;
+    }
+    &:before {
+      background-color: $light;
+    }
+  }
+
+  &.dark {
+    margin: auto;
+    border: 1px solid $secondary;
+    background-color: $dark;
+    color: $light;
+
+    &:focus {
+      outline: 1px solid $light;
+    }
+    &:before {
+      background-color: $secondary;
+    }
+  }
+
+  &:before {
+    @include pseudo;
+    @include btn-before;
+    // top: 0;
+    // bottom: 0;
+    // left: 50%;
+    // right: 50%;
+    // opacity: 0;
+    // transition: 0.5s all ease;
+  }
+
+  &:hover:before,
+  &:focus:before {
+    @include btn-hover_before;
+    // z-index: -1;
+    // left: 0;
+    // right: 0;
+    // opacity: 1;
+    // transition: 0.5s all ease;
+  }
+}

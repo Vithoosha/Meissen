@@ -1,0 +1,27 @@
+@import "../../styles/variables", "../../styles/colors", "../../styles/mixin";
+.NewProduct {
+  display: block;
+  @include flex(center, center);
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  padding-bottom: $m-padding;
+  font-size: 1rem;
+  font-weight: normal;
+  color: $dark;
+
+  &__img {
+    height: 230px;
+    object-fit: scale-down;
+  }
+
+  &__name {
+    max-width: 210px;
+    overflow: hidden;
+    margin-bottom: $m-padding;
+    white-space: nowrap;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+  }
+}

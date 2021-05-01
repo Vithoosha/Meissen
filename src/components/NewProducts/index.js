@@ -1,11 +1,11 @@
 import "./styles.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useContext } from "react";
+import { ProductsContext } from "../../store/context/ProductsProvider";
 import Loader from "../Loader";
 import ErrorMessage from "../ErrorMessage";
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { ProductsContext } from "../../store/context/ProductsProvider";
+import NewProduct from "../NewProduct";
 
 function NewProducts() {
   const { newProducts, isLoading, hasError } = useContext(ProductsContext);
@@ -35,10 +35,10 @@ function NewProducts() {
   return (
     <section className="wrapper">
       <div className="NewProducts">
-        <h3>New products</h3>
+        <h3 className="NewProducts__title">New products</h3>
         <Carousel
           swipeable={true}
-          draggable={true}
+          draggable={false}
           responsive={responsive}
           infinite={true}
           keyBoardControl={true}
@@ -49,14 +49,7 @@ function NewProducts() {
           itemClass="carousel-item-padding-40-px"
         >
           {newProducts.map((product) => {
-            const { image, id, name, price } = product;
-            return (
-              <Link key={id} className="newProduct" to={`products/${id}`}>
-                <img src={image} alt={name} />
-                <h4>{name}</h4>
-                <p>€{price}</p>
-              </Link>
-            );
+            return <NewProduct key={product.id} product={product} />;
           })}
         </Carousel>
       </div>

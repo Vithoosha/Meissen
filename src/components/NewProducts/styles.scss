@@ -1,39 +1,14 @@
-@import "../../styles/_variables.scss";
-@import "../../styles/_colors.scss";
-@import "../../styles/_mixin.scss";
+@import "../../styles/variables", "../../styles/colors", "../../styles/mixin";
 
 .NewProducts {
   @include maxWidth;
   text-align: center;
 
-  > h3 {
-    @include font(1.5rem, 1.375rem, normal, $dark);
+  &__title {
     margin-bottom: $m-padding;
     text-transform: uppercase;
-  }
-}
-
-.newProduct {
-  display: block;
-  margin: 0 10px;
-  padding-bottom: $m-padding;
-  align-items: center;
-  @include flex(center, center);
-  flex-direction: column;
-  @include font(1rem, 1.25rem, normal, $dark);
-
-  > img {
-    height: 230px;
-    object-fit: scale-down;
-  }
-
-  > h4 {
-    white-space: nowrap;
+    font-size: 1.5rem;
     font-weight: normal;
-    max-width: 210px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: $m-padding;
-    font-size: 1rem;
+    color: dark;
   }
 }

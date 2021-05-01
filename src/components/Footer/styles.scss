@@ -1,6 +1,4 @@
-@import "../../styles/_variables.scss";
-@import "../../styles/_colors.scss";
-@import "../../styles/_mixin.scss";
+@import "../../styles/variables", "../../styles/colors", "../../styles/mixin";
 
 .Footer {
   @include maxWidth;

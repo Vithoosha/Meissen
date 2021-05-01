@@ -1,15 +1,16 @@
 import "./styles.scss";
 import hero from "../../assets/image/hero.png";
+import Button from "../Button";
 
 function Hero() {
   return (
     <header className="container">
       <div className="Hero">
-        <div className="hero_text">
-          <p>New in</p>
-          <h1>Meissen Cosmopolitan</h1>
-          <h2>Giant Bloom</h2>
-          <p className="hero_desc">
+        <div className="Hero__text">
+          <p className="Hero__firstParagraph">New in</p>
+          <h1 className="Hero__title">Meissen Cosmopolitan</h1>
+          <h2 className="Hero__subtitle">Giant Bloom</h2>
+          <p className="Hero__desc">
             The new “Giant Bloom” collection that is implemented on the service
             form MEISSEN® COSMOPOLITAN, surprises with new floral decors such as
             lilies, hibiscus and peonies. Inspired by the "Giant Bloom" vase
@@ -18,9 +19,15 @@ function Hero() {
             areas of colour and consciously used white space creates a clear and
             inspiring modernity
           </p>
-          <a href="http://localhost:3000/">Shop Now</a>
+          <Button link="http://localhost:3000/" color="dark" text="Shop Now" />
         </div>
-        <img src={hero} alt="" />
+        <img
+          src={hero}
+          alt=""
+          className="Hero__image"
+          width="382"
+          height="385"
+        />
       </div>
     </header>
   );

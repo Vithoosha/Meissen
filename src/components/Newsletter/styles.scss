@@ -1,6 +1,4 @@
-@import "../../styles/_variables.scss";
-@import "../../styles/_colors.scss";
-@import "../../styles/_mixin.scss";
+@import "../../styles/variables", "../../styles/colors", "../../styles/mixin";
 
 .bgcolor {
   background-color: $gr-secondary;
@@ -9,60 +7,57 @@
 .Newsletter {
   @include maxWidth;
 
-  .newsletter_body {
+  &__body {
     margin: 60px auto;
     text-align: center;
+  }
+  &__title {
+    @include font(1.5rem, 1.375rem, bold, $secondary);
+    text-transform: uppercase;
+  }
+  &__text {
+    @include font(1rem, 1.25rem, normal, $dark);
+    margin: $gl-padding auto;
+    max-width: 400px;
+  }
+  &__input {
+    border: 1px solid $dark;
+    height: 40px;
+    background-color: inherit;
+    @include font(0.8rem, 1.25rem, normal, $dark);
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark;
 
-    > h3 {
-      @include font(1.5rem, 1.375rem, bold, $secondary);
-      text-transform: uppercase;
+    &::placeholder {
+      color: $dark;
     }
-    > p {
-      @include font(1rem, 1.25rem, normal, $dark);
-      margin: $gl-padding auto;
-      max-width: 400px;
+    &:focus {
+      outline: 1px solid $primary;
     }
-    > form {
-      > input {
-        border: 1px solid $dark;
-        height: 40px;
-        background-color: inherit;
-        @include font(0.8rem, 1.25rem, normal, $dark);
-        text-align: center;
-        text-transform: uppercase;
-        color: $dark;
-
-        &::placeholder {
-          color: $dark;
-        }
-        &:focus {
-          outline: 1px solid $primary;
-        }
-      }
-      > button {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        padding: 0 $m-padding;
-        border-radius: none;
-        height: 40px;
-        border: 1px solid $dark;
-        border-left: none;
-        background-color: $dark;
-        color: $light;
-        z-index: 1;
-        position: relative;
-        &:before {
-          @include pseudo;
-          @include btn-before;
-          background-color: $secondary;
-        }
-        &:hover:before {
-          @include btn-hover_before;
-        }
-        &:focus {
-          outline: 1px solid $primary;
-        }
-      }
+  }
+  &__btn {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 0 $m-padding;
+    border-radius: none;
+    height: 40px;
+    border: 1px solid $dark;
+    border-left: none;
+    background-color: $dark;
+    color: $light;
+    z-index: 1;
+    position: relative;
+    &:before {
+      @include pseudo;
+      @include btn-before;
+      background-color: $secondary;
+    }
+    &:hover:before {
+      @include btn-hover_before;
+    }
+    &:focus {
+      outline: 1px solid $primary;
     }
   }
 }

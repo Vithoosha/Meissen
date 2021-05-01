@@ -1,37 +1,41 @@
 @import "../../styles/_variables.scss";
 @import "../../styles/_colors.scss";
 @import "../../styles/_mixin.scss";
-@import "../../styles/_breakpoints.scss";
 
-.wrapper_nav {
+.Navbar_wrapper {
   padding: 0 $m-padding;
   z-index: 3;
-  nav {
-    @include maxWidth;
-    @include flex(space-between, center);
+}
+.Navbar {
+  @include maxWidth;
+  @include flex(space-between, center);
+
+  &__logo {
+    max-height: 20px;
   }
-  button {
-    background-color: $light;
+
+  &__btn {
+    background: $light;
     border: 0;
     &:focus {
       outline: 1px solid $dark;
     }
   }
-}
-.nav_logo {
-  max-height: 20px;
-}
-.menu {
-  display: none;
+
+  &__menu {
+    display: none;
+  }
 }
 
 @include desktop {
-  .wrapper_nav button {
-    display: none;
-  }
-  .menu {
-    @include flex(space-between, center);
-    > li {
+  .Navbar {
+    &__btn {
+      display: none;
+    }
+    &__menu {
+      @include flex(space-between, center);
+    }
+    &__link {
       margin-left: $gl-padding;
       > a {
         color: $dark;

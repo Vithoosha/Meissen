@@ -1,0 +1,47 @@
+@import "../../styles/variables", "../../styles/colors", "../../styles/mixin";
+.Collection {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: auto;
+  @include desktop {
+    width: 400px;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    @include desktop {
+      width: 400px;
+    }
+  }
+
+  &__text {
+    @include flex(space-between, center);
+    flex-direction: column;
+    width: 100%;
+    padding: $m-padding;
+    background-color: $gr-primary;
+
+    @include desktop {
+      width: 360px;
+      height: 180px;
+      margin: auto;
+
+      transform: translateY(-70px);
+    }
+  }
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__info {
+    text-align: justify;
+    margin: $m-padding 0;
+
+    @include desktop {
+      height: 100px;
+      margin: 0;
+    }
+  }
+}
